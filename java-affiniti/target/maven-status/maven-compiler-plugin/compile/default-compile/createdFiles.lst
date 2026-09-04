@@ -1,0 +1,8 @@
+CardStatus.class
+Main.class
+FraudAnalyzer.class
+Transaction.class
+Transaction$ExpectedResult.class
+FraudScore.class
+Decision.class
+FraudRule.class

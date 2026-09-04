@@ -1,0 +1,16 @@
+# Build output
+build/          # Gradle
+.gradle/        # Gradle
+target/         # Maven
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db

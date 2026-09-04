@@ -1,0 +1,327 @@
+[
+  {
+    "id": "txn_1",
+    "cardNumber": "1234567890123456",
+    "amount": 100,
+    "country": "USA",
+    "timestamp": "2025-03-13T09:00:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_2",
+    "cardNumber": "4111111111111111",
+    "amount": 50,
+    "country": "USA",
+    "timestamp": "2025-03-13T10:00:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_3",
+    "cardNumber": "5555555555554444",
+    "amount": 100,
+    "country": "Canada",
+    "timestamp": "2025-03-13T11:30:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_4",
+    "cardNumber": "6011111111111117",
+    "amount": 60,
+    "country": "France",
+    "timestamp": "2025-03-14T15:00:00.000Z",
+    "category": "restaurant",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_5",
+    "cardNumber": "3782822463100005",
+    "amount": 100,
+    "country": "UK",
+    "timestamp": "2025-03-14T16:30:00.000Z",
+    "category": "online_gaming",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_6",
+    "cardNumber": "4111111111111111",
+    "amount": 101,
+    "country": "USA",
+    "timestamp": "2025-03-15T17:00:00.000Z",
+    "category": "retail",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 20,
+      "rulesTriggered": [
+        "Unusual Amount"
+      ]
+    }
+  },
+  {
+    "id": "txn_7",
+    "cardNumber": "1234567890123456",
+    "amount": 80,
+    "country": "Canada",
+    "timestamp": "2025-03-16T09:15:00.000Z",
+    "category": "restaurant",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_8",
+    "cardNumber": "1234567890123456",
+    "amount": 90,
+    "country": "USA",
+    "timestamp": "2025-03-16T12:30:00.000Z",
+    "category": "retail",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_9",
+    "cardNumber": "1234567890123456",
+    "amount": 85,
+    "country": "France",
+    "timestamp": "2025-03-16T14:00:00.000Z",
+    "category": "hotel",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_10",
+    "cardNumber": "1234567890123456",
+    "amount": 95,
+    "country": "Germany",
+    "timestamp": "2025-03-16T16:00:00.000Z",
+    "category": "transport",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_11",
+    "cardNumber": "1234567890123456",
+    "amount": 75,
+    "country": "Spain",
+    "timestamp": "2025-03-16T18:00:00.000Z",
+    "category": "entertainment",
+    "expected": {
+      "decision": "DECLINED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 51,
+      "rulesTriggered": [
+        "Unusual Location"
+      ]
+    }
+  },
+  {
+    "id": "txn_12",
+    "cardNumber": "1234567890123456",
+    "amount": 80,
+    "country": "USA",
+    "timestamp": "2025-03-16T19:00:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 51,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_13",
+    "cardNumber": "1234567890123456",
+    "amount": 75,
+    "country": "Japan",
+    "timestamp": "2025-03-17T14:00:00.000Z",
+    "category": "restaurant",
+    "expected": {
+      "decision": "DECLINED",
+      "cardStatus": "AT_RISK",
+      "fraudRiskScore": 102,
+      "rulesTriggered": [
+        "Unusual Location"
+      ]
+    }
+  },
+  {
+    "id": "txn_14",
+    "cardNumber": "1234567890123456",
+    "amount": 50,
+    "country": "USA",
+    "timestamp": "2025-03-17T15:00:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "DECLINED",
+      "cardStatus": "AT_RISK",
+      "fraudRiskScore": 102,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_15",
+    "cardNumber": "5555555555554444",
+    "amount": 150,
+    "country": "Canada",
+    "timestamp": "2025-03-17T15:00:00.000Z",
+    "category": "atm",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_16",
+    "cardNumber": "5555555555554444",
+    "amount": 500,
+    "country": "Canada",
+    "timestamp": "2025-03-17T16:00:00.000Z",
+    "category": "jewelry",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 52,
+      "rulesTriggered": [
+        "Unusual Amount",
+        "Suspicious Category Sequence"
+      ]
+    }
+  },
+  {
+    "id": "txn_17",
+    "cardNumber": "3782822463100005",
+    "amount": 201,
+    "country": "UK",
+    "timestamp": "2025-03-18T11:20:00.000Z",
+    "category": "luxury_goods",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 52,
+      "rulesTriggered": [
+        "Unusual Amount",
+        "Suspicious Category Sequence"
+      ]
+    }
+  },
+  {
+    "id": "txn_18",
+    "cardNumber": "6011111111111117",
+    "amount": 80,
+    "country": "Italy",
+    "timestamp": "2025-03-18T12:00:00.000Z",
+    "category": "electronics",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 0,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_19",
+    "cardNumber": "6011111111111117",
+    "amount": 200,
+    "country": "Italy",
+    "timestamp": "2025-03-18T13:00:00.000Z",
+    "category": "pawn_shop",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 52,
+      "rulesTriggered": [
+        "Unusual Amount",
+        "Suspicious Category Sequence"
+      ]
+    }
+  },
+  {
+    "id": "txn_20",
+    "cardNumber": "4111111111111111",
+    "amount": 150,
+    "country": "Germany",
+    "timestamp": "2025-03-18T14:00:00.000Z",
+    "category": "online",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 20,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_21",
+    "cardNumber": "4111111111111111",
+    "amount": 25,
+    "country": "USA",
+    "timestamp": "2025-03-18T15:00:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 20,
+      "rulesTriggered": []
+    }
+  },
+  {
+    "id": "txn_22",
+    "cardNumber": "5555555555554444",
+    "amount": 501,
+    "country": "Canada",
+    "timestamp": "2025-03-18T16:00:00.000Z",
+    "category": "groceries",
+    "expected": {
+      "decision": "ACCEPTED",
+      "cardStatus": "MONITORING",
+      "fraudRiskScore": 72,
+      "rulesTriggered": [
+        "Unusual Amount"
+      ]
+    }
+  }
+]

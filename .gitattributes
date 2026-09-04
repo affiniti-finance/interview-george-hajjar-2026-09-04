@@ -1,0 +1,2 @@
+# Exclude internal scripts from template distribution
+scripts/ export-ignore
