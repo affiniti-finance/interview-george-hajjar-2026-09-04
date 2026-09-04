@@ -106,15 +106,19 @@ function calculateTransactionFraudScore(
 
   // Case 1
   const country = transaction.country;
-  if (!lastFiveCountries.some((item) => item === transaction.country)) {
+  if (
+    lastFiveCountries.length === 5 &&
+    !lastFiveCountries.includes(transaction.country)
+  ) {
     transactionDecision = 'DECLINED';
     transactionFraudRiskScore += 51;
     transactionRulesTriggered.push('Unusual Location');
   }
 
   // Case 2
-  if (transactionAverage * 2 >= transaction.amount) {
+  if (transaction.amount > transactionAverage * 2) {
     transactionFraudRiskScore += 20;
+    transactionRulesTriggered.push('Unusual Amount');
   }
 
   // Case 3
@@ -147,10 +151,6 @@ function main(transactions: TestTransaction[]) {
   let lastCategory: string = '';
 
   for (const transaction of transactions) {
-    // Last 5 country logic
-    lastFiveCountries.push(transaction.country);
-    lastFiveCountries = lastFiveCountries.slice(-5);
-
     if (lastAverageTxAmount) {
       lastAverageTxAmount = (lastAverageTxAmount + transaction.amount) / 2;
     } else {
@@ -166,6 +166,11 @@ function main(transactions: TestTransaction[]) {
       lastFiveCountries,
       lastAverageTxAmount,
     );
+
+    // Last 5 country logic
+    lastFiveCountries.push(transaction.country);
+    lastFiveCountries = lastFiveCountries.slice(-5);
+
     const incorrectFields = checkFraudScore(fraudScore, transaction.expected);
     if (incorrectFields.length > 0) {
       console.log(
